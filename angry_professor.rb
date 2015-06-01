@@ -1,3 +1,6 @@
+# Problem origin
+# https://www.hackerrank.com/challenges/angry-professor
+
 # input:
 #  - number of test cases
 #  - the total number of students in a given class
