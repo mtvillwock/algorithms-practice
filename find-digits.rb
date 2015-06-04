@@ -19,7 +19,7 @@ def find_digits(number)
   digits.each do |digit|
     if digit == 0
       next
-    else
+    elsif number % digit == 0
       count +=1
     end
   end
@@ -28,7 +28,7 @@ end
 
 cases = gets().rstrip.to_i
 cases.times do
-  number = gets().rstrip
+  number = gets().rstrip.to_i
   find_digits(number)
 end
 
