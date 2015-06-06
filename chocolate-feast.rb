@@ -14,23 +14,26 @@
 # if number of candy bars is a multiple of M, add that multiple to output
 #
 
-t = gets.to_i
-t.times{
-  (n, c, m) = gets.split.map{|i| i.to_i}
-  answer = 0
-  p n, c, m
-  p remainder = n / c
-  p bonus = m.divmod(remainder)
-  answer = remainder + bonus[0]
-        # Write code to Compute Answer
-        puts answer
-      }
+def count_chocolates
+  (dollars, cost, exchange_rate) = gets().split.map{|i| i.to_i}
+  total_chocolates_eaten = dollars / cost
+  bonus_chocolates = 0
+  wrappers = total_chocolates_eaten
+  while (wrappers + bonus_chocolates) >= exchange_rate do
+      bonus_chocolates = (bonus_chocolates + wrappers) / exchange_rate
+      wrappers = wrappers / exchange_rate
+      total_chocolates_eaten += bonus_chocolates
+    end
+    puts total_chocolates_eaten
+  end
 
-# def
-# end
+  t = gets.to_i
+  t.times do
+    count_chocolates
+  end
 
-# cases = gets().rstrip.to_i
-# cases.times do
-#   number = gets().rstrip.to_i
-#   find_digits(number)
-# end
+# Test input
+# 3
+# 10 2 5
+# 12 4 4
+# 6 2 2
