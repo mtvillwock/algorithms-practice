@@ -34,22 +34,22 @@ def binary_search_iterative(target, array)
       # handle instant find input
       if target == array[mid_index]
         return "index of target is #{mid_index}"
-      elsif target > array[mid_index]
-        sleep(2.0)
-        p "target is #{target}"
-        p "low is #{low_index}, mid is #{mid_index}, high is #{high_index}"
-        low_index = mid_index
-        p "new low is #{low_index}"
-        mid_index = mid_index + ((high_index - low_index) / 2)
-        p "new mid is #{mid_index}"
-      elsif target < array[mid_index]
-        high_index = mid_index
-        p "new high is #{high_index}"
-        mid_index = (high_index - low_index) / 2
-        p "new mid is #{mid_index}"
-      end
-    end
-    return true if target == array[mid_index]
+    #   elsif target > array[mid_index]
+    #     sleep(2.0)
+    #     p "target is #{target}"
+    #     p "low is #{low_index}, mid is #{mid_index}, high is #{high_index}"
+    #     low_index = mid_index
+    #     p "new low is #{low_index}"
+    #     mid_index = mid_index + ((high_index - low_index) / 2)
+    #     p "new mid is #{mid_index}"
+    #   elsif target < array[mid_index]
+    #     high_index = mid_index
+    #     p "new high is #{high_index}"
+    #     mid_index = (high_index - low_index) / 2
+    #     p "new mid is #{mid_index}"
+    #   end
+    # end
+    # return true if target == array[mid_index]
   end
 
   # search for valid target below mid
